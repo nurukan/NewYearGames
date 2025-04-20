@@ -1,0 +1,300 @@
+@charset "UTF-8";
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+html {
+    font-size: 62.5%;
+    
+}
+  
+body {
+    font-size: 1.8rem;
+    font-family: "Noto Sans JP", sans-serif;
+    background-color: rgb(235, 246, 247);
+    color: #1B1B1B;
+}
+
+body::-webkit-scrollbar{
+    display:none;
+}
+
+img {
+    width: 100%;
+    vertical-align: bottom;
+}
+
+h1 {    
+    font-family: "Yuji Syuku", serif;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 3.8rem;
+    text-align: center;
+    margin-block-start: 40px;
+    color: #fcfcfc;
+    text-shadow: 
+       0 0 2px #a1bdbf, 
+       0 0 5px #6f9396, 
+       0 0 10px #82a5a8, 
+       0 0 15px #a1bdbf;     
+}
+
+p {
+    font-family: "Yuji Syuku", serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 2.4rem;
+    text-align: center;
+    color: #333;
+    color: #fcfcfc;
+    text-shadow: 
+       0 0 2px #a1bdbf, 
+       0 0 5px #6f9396, 
+       0 0 10px #82a5a8, 
+       0 0 15px #a1bdbf;
+}
+
+.today {
+    font-size: 3.0rem;
+}
+
+.background_square {
+    width: 90%;
+    border-radius: 10px;
+    background-color: #FFF;
+    margin: 40px auto ;
+    padding: 40px 20px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+    gap: 40px 10%;
+    box-shadow: 0 0 20px rgb(111, 147, 150,0.1);
+}
+
+/* min-width:600px */
+@media (min-width:600px) {
+    
+    h1 {    
+        font-size: 4.8rem;
+        margin-block-start: 120px;   
+    }
+
+    p {
+        font-size: 3.2rem;
+        margin-block-start: 10px;
+    }
+
+    .background_square {
+        width: 540px;
+    }
+}/* min-width:600px */
+
+/* min-width:1025px */
+@media (min-width:1025px) {
+   
+    .background_square {
+        width: 800px;
+        padding: 80px 60px;
+        gap: 60px 10%;
+    }
+}/* min-width:1025px */
+
+
+.contain {
+    position: relative;
+}
+
+.background_torii {
+    background-image: url(../images/torii.png);
+    width: 200px;
+    height: 200px;
+    background-repeat: no-repeat;
+    background-size: contain;
+    position: absolute;
+    top:-6%;
+    right: 2%;
+    z-index: -1;
+    box-shadow: inset 0 0 15px 15px rgba(235, 246, 247, 0.8)
+}
+.omikuji {
+    background-image: url(../images/omikuji.png);
+    width: 50px;
+    height: 140px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    position: absolute;
+    top: 10%;
+    left: 6%;
+    z-index: 100;
+    transform:  rotate(40deg);
+    animation: omikuji 4s infinite;
+}
+
+@keyframes omikuji {
+ 0% {
+
+    transform: rotate(25deg);
+ }
+ 50%{
+    transform: rotate(5deg);
+ }
+ 100%{
+    transform: rotate(25deg);
+ }
+}
+
+/* min-width:600px */
+@media (min-width: 600px) {
+    .background_square {
+        position: relative;
+    }
+
+    .background_torii {
+        position: absolute;
+        top:50%;
+        right: 50%;
+        transform: translate(320px,-280px);
+    }
+
+    .omikuji {
+        width: 80px;
+        height: 200px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: rotate(40deg) translate(-280px, -220px);
+    }
+
+    @keyframes omikuji {
+        0% {
+          transform: translate(-280px, -220px) rotate(25deg);
+        }
+        50% {
+          transform: translate(-280px, -220px) rotate(5deg);
+        }
+        100% {
+          transform: translate(-280px, -220px) rotate(25deg);
+        }
+      }
+}/* min-width:600px */
+
+/* min-width:1025px */
+@media (min-width: 1025px) {
+
+    .background_torii {
+        width: 400px;
+        height: 400px;
+        position: absolute;
+        top:50%;
+        right: 50%;
+        transform: translate(480px,-480px);
+    }
+
+    .omikuji {
+        width: 90px;
+        height: 220px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: rotate(40deg) translate(-380px, -260px);
+    }
+
+    @keyframes omikuji {
+        0% {
+          transform: translate(-380px, -260px) rotate(25deg);
+        }
+        50% {
+          transform: translate(-380px, -260px) rotate(5deg);
+        }
+        100% {
+          transform: translate(-380px, -260px) rotate(25deg);
+        }
+      }
+}/* min-width:1025px */
+
+
+
+
+.circle {
+    width: 100px;
+    height: 100px;
+    background-color: pink;
+    border-radius: 50%;
+    z-index: 1000;
+    box-shadow: 0 0 3px rgb(223, 204, 27);
+}
+
+.hazure {
+    width: 100px;
+    height: 100px;
+    background-color: greenyellow;
+    border-radius: 50%;
+    background-image: url(../images/kagamimochi12.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    transform: rotate(720deg);
+    transition: 1s;
+}
+
+.atari {
+    width: 100px;
+    height: 100px;
+    background-color: palevioletred;
+    border-radius: 50%;
+    background-image: url(../images/daruma.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    animation: atari 1s;
+    
+}
+
+@keyframes atari {
+    0% {
+        color: pink;
+        transform: scaleX(1);
+        opacity: 1;
+        
+    }
+    20%{
+        color: pink;
+        opacity: 1;
+        
+    }
+
+    50% {
+        color: pink;
+        opacity: 0.2;
+        transform: scaleX(0);
+    }
+    100% {
+        transform: scaleX(1);
+    }
+}
+
+
+/* min-width:1025px */
+@media(min-width:1025px){
+    .circle {
+        width: 140px;
+        height: 140px;
+    }
+
+    .hazure {
+        width: 140px;
+        height: 140px;
+    }
+
+    .atari {
+        width: 140px;
+        height: 140px;
+    }
+
+}/* min-width:1025px */
+
