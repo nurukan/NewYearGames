@@ -36,7 +36,7 @@ h1 {
     font-style: normal;
     font-size: 3.8rem;
     text-align: center;
-    margin-block-start: 30px;
+    margin-block-start: 24px;
     color: #fcfcfc;
     text-shadow: 
        0 0 2px #a1bdbf, 
@@ -68,14 +68,14 @@ p {
     width: 90%;
     border-radius: 10px;
     background-color: #FFF;
-    margin: 40px auto 10px;
+    margin: 20px auto 10px;
     padding: 30px 20px;
     display: flex;
     flex-wrap: wrap;
     align-items: center;
     justify-content: center;
     box-sizing: border-box;
-    gap: 28px 8%;
+    gap: 16px 10%;
     box-shadow: 0 0 20px rgb(111, 147, 150,0.1);
 }
 
@@ -84,7 +84,7 @@ p {
     
     h1 {    
         font-size: 4.8rem;
-        margin-block-start: 120px;  
+        margin-block-start: 80px;  
     }
 
     p {
@@ -104,8 +104,8 @@ p {
    
     .background_square {
         width: 800px;
-        padding: 80px 60px;
-        gap: 60px 10%;
+        padding: 58px 60px;
+        gap: 58px 10%;
     }
     
     .today {
@@ -116,6 +116,7 @@ p {
 
 .contain {
     position: relative;
+    width: auto;
     height: 100dvh;
 }
 
@@ -126,7 +127,7 @@ p {
     background-repeat: no-repeat;
     background-size: contain;
     position: absolute;
-    top:-6%;
+    top:-8%;
     right: 2%;
     z-index: -1;
     box-shadow: inset 0 0 15px 15px rgba(235, 246, 247, 0.8)
@@ -166,10 +167,12 @@ p {
     }
 
     .background_torii {
+        width: 380px;
+        height: 380px;
         position: absolute;
         top:50%;
         right: 50%;
-        transform: translate(320px,-280px);
+        transform: translate(320px,-480px);
     }
 
     .omikuji {
@@ -178,18 +181,18 @@ p {
         position: absolute;
         top: 50%;
         left: 50%;
-        transform: rotate(40deg) translate(-280px, -220px);
+        transform: rotate(40deg) translate(-280px, -260px);
     }
 
     @keyframes omikuji {
         0% {
-          transform: translate(-280px, -220px) rotate(25deg);
+          transform: translate(-280px, -260px) rotate(25deg);
         }
         50% {
-          transform: translate(-280px, -220px) rotate(5deg);
+          transform: translate(-280px, -260px) rotate(5deg);
         }
         100% {
-          transform: translate(-280px, -220px) rotate(25deg);
+          transform: translate(-280px, -260px) rotate(25deg);
         }
       }
 }/* min-width:600px */
@@ -203,7 +206,7 @@ p {
         position: absolute;
         top:50%;
         right: 50%;
-        transform: translate(480px,-480px);
+        transform: translate(480px,-540px);
     }
 
     .omikuji {
@@ -212,18 +215,18 @@ p {
         position: absolute;
         top: 50%;
         left: 50%;
-        transform: rotate(40deg) translate(-380px, -260px);
+        transform: rotate(40deg) translate(-390px, -310px);
     }
 
     @keyframes omikuji {
         0% {
-          transform: translate(-380px, -260px) rotate(25deg);
+          transform: translate(-390px, -310px) rotate(25deg);
         }
         50% {
-          transform: translate(-380px, -260px) rotate(5deg);
+          transform: translate(-390px, -310px) rotate(5deg);
         }
         100% {
-          transform: translate(-380px, -260px) rotate(25deg);
+          transform: translate(-390px, -310px) rotate(25deg);
         }
       }
 }/* min-width:1025px */
